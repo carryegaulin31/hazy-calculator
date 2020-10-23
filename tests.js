@@ -1,7 +1,9 @@
+/* eslint-disable no-undef */
 const { expect } = require('chai')
-const { describe, it } = require('mocha')
+// const { describe, it } = require('mocha')
 const calculate = require('./index')
 
+// eslint-disable-next-line no-undef
 describe('HazyCalculator', () => {
   it('multiplies two numbers when one is stringified', () => {
     const calculationSteps = ['2', '*', 4]
