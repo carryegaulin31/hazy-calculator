@@ -3,30 +3,38 @@ function calculate(arr) {
   const operand = ['+', '-', '/', '*']
   for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] === 'string' || typeof arr[i] === 'number') {
-    } else if (operand.includes(arr[i])) {
-    } else if (arr[i] = null) return 0
-      (Number(arr[i].push(newArr)))
+      if (operand.includes(arr[i]))
+        if (arr[i] = null) return 0
+      arr[i].push(newArr);
+    } else {
+      if (arr[i] !== (""))
+        (Number(arr[i].push(newArr)))
+    }
   }
-}
 
-let num1 = newArr[0]
-let num2 = newArr[2];
-function getAnswer(newArr) {
-  switch (newArr[1]) {
-    case "+":
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "*":
-      return num1 * num2;
-    case "/":
-      return num1 + num2;
-    default:
-      return "NaN"
+  getAnswer(newArr)
+
+  let num1 = newArr[0]
+  let num2 = newArr[2];
+  function getAnswer(newArr) {
+    switch (newArr[1]) {
+      case "+":
+        return num1 + num2;
+      case "-":
+        return num1 - num2;
+      case "*":
+        return num1 * num2;
+      case "/":
+        return num1 + num2;
+      default:
+        return "NaN"
+    }
   }
 }
 
 module.exports = calculate
+
+
 // The `calculate` function runs an arithmetic calculation based upon an array of inputs (eg. `[2, '*', 10]`)
 // Each input should be either a number or an operand (`+`, `-`, `*`, `/`)
 // Our upstream data is inconsistent, so we _intentionally_ accept it and deal with it in the following ways:
