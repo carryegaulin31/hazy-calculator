@@ -1,47 +1,32 @@
-function calculate(arr) {           // calcaulate my array
+function calculate(arr) {
+  const newArr = []
+  const operand = ['+', '-', '/', '*']
   for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[0] === 'string') {
-      Number(arr[i]).push(newArr) {  // change it to a number is there a way to think of it as THEN?? IF THEN??
-      } else {
-        if (arr[i] = null) {
-          let(arr[i] = 0) && arr[i].push(newArr)  //if it is null change it to zero and push to new array
-        } else {
-          if (typeof (arr[i] = (Number))) {
-            return arr[i].push(newArr) // if it is actually a number then push to new array
-          } else {
-            if (arr[i].includes(operator)) {
-              return arr[i].push(newArr)  // if it is an operator push it to new array position 1 cant do push!! what do I do?!?!
-            } else {
-              return NaN
-            }
-          }
+    if (typeof arr[i] === 'string' || typeof arr[i] === 'number') {
+    } else if (operand.includes(arr[i])) {
+    } else if (arr[i] = null) return 0
+      (Number(arr[i].push(newArr)))
+  }
+}
 
+let num1 = newArr[0]
+let num2 = newArr[2];
+function getAnswer(newArr) {
+  switch (newArr[1]) {
+    case "+":
+      return num1 + num2;
+    case "-":
+      return num1 - num2;
+    case "*":
+      return num1 * num2;
+    case "/":
+      return num1 + num2;
+    default:
+      return "NaN"
+  }
+}
 
-          if (newArr.length = (3)) // how do I get this to actually DO THE MATH??
-            let operand = ("+", "-", "*", "/");
-          let num1 = newArr[0] // if newArr = 3 then 0 & 2 should be numbers and operator automatically in the middle at 1
-          let num2 = newArr[2];
-          function getAnswer(num1, num2, operand) {
-            switch (newArr[1]) {
-              case "+":
-                return num1 + num2;
-
-              case "-":
-                return num1 - num2;
-
-              case "*":
-                return num1 * num2;
-
-              case "/":
-                return num1 + num2;
-
-              default:
-                return "NaN"
-            }
-
-
-            module.exports = calculate()
-
+module.exports = calculate
 // The `calculate` function runs an arithmetic calculation based upon an array of inputs (eg. `[2, '*', 10]`)
 // Each input should be either a number or an operand (`+`, `-`, `*`, `/`)
 // Our upstream data is inconsistent, so we _intentionally_ accept it and deal with it in the following ways:
